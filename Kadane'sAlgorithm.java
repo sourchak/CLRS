@@ -1,6 +1,7 @@
 // This algorithm is taken from https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/
 // It computes a solution to the maximum subarry problem in linear time
 // It is the answer to Exercise 4.1-5
+// It think my rendition works better than geeksforgeeks.org
 
 import java.util.Scanner;
 
