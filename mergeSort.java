@@ -46,7 +46,7 @@ public class mergeSort
         j=0;
         for(int k=p;k<=r;k++)
         {
-            if(L[i]<R[j])
+            if(L[i]<=R[j])
             {
                 A[k]=L[i];
                 i++;
