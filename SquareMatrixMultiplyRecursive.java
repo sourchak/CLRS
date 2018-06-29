@@ -25,10 +25,13 @@ public class SquareMatrixMultiplyRecursive
 		System.out.print("Enter the values of the second matrix: ");
 		B=inputMatrix(n);
 		System.out.println("The product matrix is: ");
+		long t1=System.nanoTime();
 		C=worker(new index(1,1),new index(n,n),new index(1,1),new index(n,n));	
+		long t2=System.nanoTime();
 		for(int i=0;i<n;i++,System.out.println())
 			for(int j=0;j<n;j++)
 				System.out.print(C[i][j]+""+"\t");
+		System.out.println("Running time: "+((t2-t1)*Math.pow(10,-9)));
 	}
 	static int[][] inputMatrix(int n)
 	{
