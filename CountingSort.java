@@ -16,7 +16,7 @@ class CountingSort
 			if(A[i]>max)
 				max=A[i];
 		}
-		A=countingSort(A,max);
+		A=countingSort(A,max+1);
 		System.out.println("The sorted array is: ");
 		for(int x: A)
 			System.out.print(x+""+'\t');
@@ -28,13 +28,13 @@ class CountingSort
 		for(int i=0;i<h;i++)
 			C[i]=0;
 		for(int i=0;i<A.length;i++)
-			C[A[i]-1]=C[A[i]-1]+1;
+			C[A[i]]=C[A[i]]+1;
 		for(int i=1;i<h;i++)
 			C[i]=C[i]+C[i-1];
 		for(int i=A.length-1;i>-1;i--)
 		{
-			B[C[A[i]-1]-1]=A[i];
-			C[A[i]-1]=C[A[i]-1]-1;
+			B[C[A[i]]-1]=A[i];
+			C[A[i]]=C[A[i]]-1;
 		}
 		return B;
 	}
